@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tayyab.CalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-08-17T23:32:49" hostname="Muhammads-MacBook-Pro.local" time="0.007">
+<testsuite name="com.tayyab.CalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-08-17T23:50:30" hostname="Muhammads-MacBook-Pro.local" time="0.007">
   <properties/>
   <testcase name="addTwoPositiveIntegers()" classname="com.tayyab.CalculatorTest" time="0.007"/>
   <system-out><![CDATA[]]></system-out>

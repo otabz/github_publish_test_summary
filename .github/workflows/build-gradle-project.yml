@@ -6,6 +6,10 @@ on:
 jobs:
   build-gradle-project:
     runs-on: ubuntu-latest
+    # Permissions block is optional, useful for dependabot checks
+    permissions:
+      checks: write
+      contents: read
     steps:
       - name: Checkout project sources
         uses: actions/checkout@v3
