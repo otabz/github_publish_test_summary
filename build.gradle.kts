@@ -16,4 +16,6 @@ dependencies {
 
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
+    reports.html.required.set(true)
+    reports.junitXml.required.set(true)
 }
