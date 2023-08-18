@@ -16,18 +16,18 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
       - name: Run build with Gradle Wrapper
-        run: ./gradlew clean test
-      - name: Publish Test Report
-        if: success() || failure()
-        uses: AutoModality/action-xunit-viewer@v1 #phoenix-actions/test-reporting@v12 #mikepenz/action-junit-report@v3 #scacap/action-surefire-report@v1
-        with:
-          results: '**/build/reports/tests/test'
+        run: ./gradlew
+      #- name: Publish Test Report
+      #  if: success() || failure()
+      #  uses: AutoModality/action-xunit-viewer@v1 #phoenix-actions/test-reporting@v12 #mikepenz/action-junit-report@v3 #scacap/action-surefire-report@v1
+      #  with:
+      #    results: '**/build/reports/tests/test'
           #report_paths: '**/build/test-results/test/TEST-*.xml'
           #name: JEST Tests
           #path: '**/build/test-results/test/TEST-*.xml'
           #reporter: java-junit
-      - name: Attach the report
-        uses: actions/upload-artifact@v1
+      - name: Upload test reports
+        uses: actions/upload-artifact@v3
         with:
-          name: ${{ steps.xunit-viewer.outputs.report-name }}
-          path: ${{ steps.xunit-viewer.outputs.report-dir }}
+          name: unit-tests-results
+          path: build/reports/unit-tests/aggregated-results
