@@ -19,7 +19,8 @@ jobs:
         run: ./gradlew clean test
       - name: Publish Test Report
         if: success() || failure()
-        uses: mikepenz/action-junit-report@v3 #scacap/action-surefire-report@v1
+        uses: phoenix-actions/test-reporting@v12 #mikepenz/action-junit-report@v3 #scacap/action-surefire-report@v1
         with:
-          report_paths: '**/build/test-results/test/TEST-*.xml'
-          detailed_summary: 'true'
+          #report_paths: '**/build/test-results/test/TEST-*.xml'
+          paths: '**/build/test-results/test/TEST-*.xml'
+          reporter: jest-junit
