@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: unit-tests-results
-          path: build/reports/unit-tests/aggregated-results
+          path: build/reports/tests/unit-test/aggregated-results
