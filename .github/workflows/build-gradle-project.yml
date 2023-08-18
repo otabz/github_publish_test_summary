@@ -32,4 +32,4 @@ jobs:
           name: unit-tests-results
           path: build/reports/tests/unit-test/aggregated-results
       - name: Mark Test Report
-        run: echo "${{GITHUB_WORKSPACE}}" >> $GITHUB_STEP_SUMMARY
+        run: echo "$GITHUB_WORKSPACE" >> $GITHUB_STEP_SUMMARY
