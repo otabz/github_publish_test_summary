@@ -8,6 +8,6 @@ class ScientificCalculatorTest {
 
     @Test
     void multiplyTwoIntegers() {
-        assertEquals(21, new ScientificCalculator().multiply(4, 5));
+        assertEquals(20, new ScientificCalculator().multiply(4, 5));
     }
 }
