@@ -24,4 +24,4 @@ jobs:
           #report_paths: '**/build/test-results/test/TEST-*.xml'
           name: JEST Tests
           path: '**/build/test-results/test/TEST-*.xml'
-          reporter: jest-junit
+          reporter: java-junit
