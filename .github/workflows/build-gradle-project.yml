@@ -20,7 +20,8 @@ jobs:
       - name: Publish Test Report
         if: success() || failure()
         uses: AutoModality/action-xunit-viewer@v1 #phoenix-actions/test-reporting@v12 #mikepenz/action-junit-report@v3 #scacap/action-surefire-report@v1
-        #with:
+        with:
+          results: '**/build/reports/tests/test'
           #report_paths: '**/build/test-results/test/TEST-*.xml'
           #name: JEST Tests
           #path: '**/build/test-results/test/TEST-*.xml'
